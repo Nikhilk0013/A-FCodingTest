@@ -16,6 +16,11 @@ class ANFExploreCardTableViewController: UITableViewController {
         return nil
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ExploreContentCell")
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         exploreData?.count ?? 0
     }
